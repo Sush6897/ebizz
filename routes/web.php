@@ -16,7 +16,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register.form');
 Route::post('/register', [UserController::class, 'register'])->name('register');
-Route::get('/login', [UserController::class, 'showLoginForm'])->name('login.form');
+Route::get('/', [UserController::class, 'showLoginForm'])->name('login.form');
 Route::post('/login1', [UserController::class, 'login'])->name('login');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
